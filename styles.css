@@ -87,7 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,22 +102,25 @@ h1, h2, h3, h4, h5, h6 {
     animation: fadeInUp 0.8s ease;
     font-weight: 900;
     letter-spacing: -1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content .subtitle {
     font-size: 28px;
     margin-bottom: 15px;
-    opacity: 0.95;
+    opacity: 0.98;
     animation: fadeInUp 0.8s ease 0.2s both;
     font-weight: 700;
     font-family: var(--font-headline);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-description {
     font-size: 18px;
     margin-bottom: 40px;
-    opacity: 0.85;
+    opacity: 0.95;
     animation: fadeInUp 0.8s ease 0.4s both;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -425,6 +429,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
     .hero-content h1 {
         font-size: 45px;
     }
