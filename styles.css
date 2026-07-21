@@ -29,7 +29,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
-<div class="logo">Rose Ocone</div>
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,9 +44,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text; 
-    <h1>Hi, I'm Rose Ocone!</h1>
-<p class="subtitle">Filmmaker, Photographer, Storyteller. Welcome to my portfolio!</p>
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
@@ -62,6 +60,7 @@ body {
     color: var(--text-dark);
     font-weight: 500;
     transition: var(--transition);
+    font-size: 14px;
 }
 
 .nav-link:hover {
@@ -87,16 +86,25 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+    font-size: 70px;
+    margin-bottom: 10px;
     animation: fadeInUp 0.8s ease;
+    font-weight: 700;
 }
 
 .hero-content .subtitle {
-    font-size: 24px;
-    margin-bottom: 40px;
-    opacity: 0.9;
+    font-size: 28px;
+    margin-bottom: 15px;
+    opacity: 0.95;
     animation: fadeInUp 0.8s ease 0.2s both;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.85;
+    animation: fadeInUp 0.8s ease 0.4s both;
 }
 
 .cta-button {
@@ -108,7 +116,7 @@ body {
     border-radius: 50px;
     font-weight: bold;
     transition: var(--transition);
-    animation: fadeInUp 0.8s ease 0.4s both;
+    animation: fadeInUp 0.8s ease 0.6s both;
 }
 
 .cta-button:hover {
@@ -119,75 +127,128 @@ body {
 /* About Section */
 .about {
     padding: 100px 0;
-    background-color: var(--bg-light);
+    background-color: var(--white);
 }
 
 .about h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.about p {
-    font-size: 18px;
-    color: var(--text-light);
-    margin-bottom: 20px;
-    text-align: center;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Projects Section */
-.projects {
-    padding: 100px 0;
-}
-
-.projects h2 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 50px;
     text-align: center;
 }
 
-.projects-grid {
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.skills-list {
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skills-list li {
+    padding: 12px 20px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Films Section */
+.films {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.films h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-.project-card {
+.film-card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
-.project-card:hover {
+.film-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.project-image {
-    height: 200px;
+.film-image {
+    height: 250px;
     width: 100%;
 }
 
-.project-card h3 {
-    padding: 20px 20px 10px;
-    font-size: 22px;
+.film-card h3 {
+    padding: 20px 20px 5px;
+    font-size: 24px;
 }
 
-.project-card p {
+.film-year {
     padding: 0 20px;
-    color: var(--text-light);
-    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.project-link {
+.film-description {
+    padding: 10px 20px;
+    color: var(--text-light);
+}
+
+.film-tags {
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background: var(--bg-light);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.film-link {
     display: inline-block;
     padding: 10px 20px;
-    margin: 0 20px 20px 0;
+    margin: 15px 20px 20px 20px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     text-decoration: none;
@@ -195,51 +256,110 @@ body {
     transition: var(--transition);
 }
 
-.project-link:hover {
+.film-link:hover {
     opacity: 0.8;
 }
 
-/* Skills Section */
-.skills {
+/* Photography Section */
+.photography {
     padding: 100px 0;
-    background-color: var(--bg-light);
+    background-color: var(--white);
 }
 
-.skills h2 {
-    font-size: 40px;
-    margin-bottom: 50px;
+.photography h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.skills-grid {
+.photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
 }
 
-.skill-item {
-    background: var(--white);
-    padding: 40px;
+.photo-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
-.skill-item:hover {
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.photo-image {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-caption {
+    padding: 15px;
+    background: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Casting Section */
+.casting {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.casting h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.casting-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.casting-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.casting-box:hover {
     transform: translateY(-5px);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.casting-box h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.casting-box p {
+    color: var(--text-light);
+    line-height: 1.8;
 }
 
 /* Contact Section */
 .contact {
     padding: 100px 0;
     text-align: center;
+    background-color: var(--white);
 }
 
 .contact h2 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
@@ -293,27 +413,36 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .hero-content .subtitle {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .nav-menu {
         gap: 15px;
+        font-size: 12px;
     }
 
-    .projects-grid {
+    .films-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills-grid {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .casting-content {
         grid-template-columns: 1fr;
     }
 
     .contact-links {
         flex-direction: column;
         align-items: center;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
     }
 }
